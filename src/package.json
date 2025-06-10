@@ -1,0 +1,33 @@
+{
+  "name": "cricket-scorer-pro-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cricket Scorer Pro application with frontend and backend.",
+  "scripts": {
+    "install:frontend": "npm install --prefix frontend",
+    "install:backend": "npm install --prefix backend",
+    "postinstall": "npm run install:frontend && npm run install:backend",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev": "concurrently \"npm:dev:frontend\" \"npm:dev:backend\"",
+    "build:frontend": "npm run build --prefix frontend",
+    "start:backend": "npm start --prefix backend",
+    "start": "npm run build:frontend && npm run start:backend"
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://example.com/your-repo.git"
+  },
+  "keywords": [
+    "cricket",
+    "scoring",
+    "react",
+    "express",
+    "sqlite"
+  ],
+  "author": "Your Name",
+  "license": "ISC"
+}
